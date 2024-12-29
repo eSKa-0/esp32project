@@ -30,8 +30,6 @@ void WiFiCache::displayCachedNetworks() {
 }
 
 void WiFiCache::scanNetworks() {
-    Serial.println("\nScanning for WiFi networks...");
-
     int numNetworks = WiFi.scanNetworks();
     if (numNetworks == 0) {
         Serial.println("No networks found.");
